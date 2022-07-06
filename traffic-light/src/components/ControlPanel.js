@@ -1,42 +1,18 @@
-const ControlPanel = ({setFunction}) => {
+const ControlPanel = ({setActiveLight}) => {
 
     return (
         <div id="controlPanel">
             <div id="stopButton" className="button" 
-                onClick={() => setFunction.setStop((color) => {
-                    if(color === 'black') {
-                        color = 'Red'
-                        setFunction.setSlow('black')
-                        setFunction.setGo('black')
-                    } else {
-                        color = 'black'
-                    }
-                    return color                
-                })}>Stop</div>
+                onClick={() => setActiveLight('stop')}
+            >Stop</div>
 
             <div id="slowButton" className="button" 
-                onClick={() => setFunction.setSlow((color) => {
-                    if(color === 'black') {
-                        color = 'yellow'
-                        setFunction.setStop('black')
-                        setFunction.setGo('black')
-                    } else {
-                        color = 'black'
-                    }
-                    return color                
-                })}>Slow</div>
+                onClick={() => setActiveLight('slow')}
+            >Slow</div>
 
             <div id="goButton" className="button" 
-                onClick={() => setFunction.setGo((color) => {
-                    if(color === 'black') {
-                        color = 'green'
-                        setFunction.setStop('black')
-                        setFunction.setSlow('black')
-                    } else {
-                        color = 'black'
-                    }
-                    return color                
-                })}>Go</div>
+                onClick={() => setActiveLight('go')}
+            >Go</div>
         </div>
     );
 };
