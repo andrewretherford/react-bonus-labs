@@ -1,8 +1,6 @@
-const LargeImage = () => {
+const LargeImage = ({url}) => {
     return (
-        <div>
-            
-        </div>
+        <img id="bigimage" src={url} alt=""/>
     );
 };
 
