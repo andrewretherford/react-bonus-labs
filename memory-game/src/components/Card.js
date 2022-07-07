@@ -1,9 +1,11 @@
-const Card = () => {
-    
+import { useState } from "react";
+
+const Card = ({card, initImg, clickHandler}) => {
+    const [src, setSrc] = useState(initImg)
     return (
-        <div>
-            
-        </div>
+            <img src={src} alt="" 
+                onClick={() => setSrc(card.cardImage)}
+            />
     );
 };
 
