@@ -1,6 +1,6 @@
 const SmallImage = ({src, setCurrentImage}) => {
     return (
-        <div id="thumbnails">
+        <div>
             <img className="thumb" onClick={() => setCurrentImage(src)}
                 src={src} alt="">
             </img>

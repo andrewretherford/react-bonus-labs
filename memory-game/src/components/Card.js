@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const Card = ({card, initImg, clickHandler}) => {
+const Card = ({card, initImg, cardFlipHandler}) => {
     const [src, setSrc] = useState(initImg)
     return (
             <img src={src} alt="" 
-                onClick={() => setSrc(card.cardImage)}
+                onClick={() => setSrc(cardFlipHandler(card))}
             />
     );
 };

@@ -18,13 +18,15 @@ function App() {
 
   return (
     <div className="App" id="wrapper">
+      <div id="thumbnails">
+        {images.map((url, index) => {
+          return <SmallImage 
+            src={url}
+            setCurrentImage={setCurrentImage}
+            key={index} />
+        })}
+      </div>
       <LargeImage url={currentImage}/>
-      {images.map((url, index) => {
-        return <SmallImage 
-          src={url}
-          setCurrentImage={setCurrentImage}
-          key={index} />
-      })}
       <Form handleSubmit={handleSubmit} />
     </div>
   );
